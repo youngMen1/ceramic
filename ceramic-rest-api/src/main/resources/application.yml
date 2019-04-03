@@ -1,0 +1,22 @@
+
+server:
+  port: 8000
+
+spring:
+  application:
+    name: ceramic-rest-api
+
+logging:
+  level:
+    com.oyster: DEBUG
+  pattern:
+    console: "%d{yyyy-MM-dd HH:mm:ss} - %msg%n"
+    file: "%d{yyyy-MM-dd HH:mm:ss} [%thread] %-5level %logger{36} - %msg%n"
+  file: /opt/logs/sso-rest-api.log
+
+eureka:
+  client:
+    register-with-eureka: true
+    fetch-registry: true
+    serviceUrl:
+      defaultZone: http://211.159.189.77:22002/eureka/,http://134.175.12.243:22002/eureka/
